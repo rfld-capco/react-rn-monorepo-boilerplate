@@ -1,0 +1,45 @@
+{
+    "name": "nozzle",
+    "main": "__generated__/AppEntry.js",
+    "version": "1.0.0",
+    "private": true,
+    "scripts": {
+        "start": ". ./setEnv.sh && expo start -c",
+        "start:mock": ". ./setEnv.mock.sh && expo start -c",
+        "postinstall": "expo-yarn-workspaces postinstall",
+        "android": "expo start --android",
+        "ios": "expo start --ios",
+        "eject": "expo eject",
+        "test": "jest"
+    },
+    "jest": {
+        "preset": "jest-expo",
+        "transformIgnorePatterns": [
+            "node_modules/(?!(jest-)?react-native|react-clone-referenced-element|@react-native-community|expo(nent)?|@expo(nent)?/.*|react-navigation|@react-navigation/.*|@unimodules/.*|sentry-expo|native-base)"
+        ],
+        "transform": {
+            "^.+\\.jsx?$": "babel-jest"
+        }
+    },
+    "dependencies": {
+        "@expo/samples": "2.1.1",
+        "@react-native-community/async-storage": "^1.6.2",
+        "env-cmd": "^10.0.1",
+        "expo": "35.0.0",
+        "expo-config": "^1.0.0",
+        "expo-constants": "^7.0.1",
+        "expo-env": "^1.1.1",
+        "react-native": "https://github.com/expo/react-native/archive/sdk-35.0.0.tar.gz",
+        "react-native-elements": "^1.2.6",
+        "react-native-gesture-handler": "~1.0.14",
+        "react-navigation": "^4.0.10",
+        "redux-persist": "^6.0.0",
+        "shared": "1.0.0"
+    },
+    "devDependencies": {
+        "babel-jest": "23.6.0",
+        "babel-plugin-inline-dotenv": "^1.5.0",
+        "jest-expo": "35.0.0",
+        "schedule": "0.4.0"
+    }
+}

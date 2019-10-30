@@ -1,0 +1,64 @@
+{
+    "name": "root",
+    "private": true,
+    "scripts": {
+        "start": "lerna --scope=web --scope=nozzle run start --stream --",
+        "start:mock": "lerna --scope=web --scope=nozzle run start:mock --stream --",
+        "mobile": "lerna --scope=nozzle run start --stream --",
+        "mobile:mock": "lerna --scope=nozzle run start:mock --stream --",
+        "web": "lerna --scope=web run start --stream --",
+        "web:mock": "lerna --scope=web run start:mock --stream --",
+        "test web": "lerna --scope=web run test --stream --",
+        "test mobile": "lerna --scope=nozzle run test --stream --",
+        "test shared": "lerna --scope=shared run test --stream --",
+        "test": "lerna run test --stream --"
+    },
+    "dependencies": {
+        "@expo/samples": "2.1.1",
+        "axios": "^0.19.0",
+        "babel-core": "7.0.0-bridge.0",
+        "babel-plugin-transform-inline-environment-variables": "^0.4.3",
+        "expo": "35.0.0",
+        "metro-config": "^0.53.1",
+        "react-native": "https://github.com/expo/react-native/archive/sdk-35.0.0.tar.gz",
+        "recompose": "^0.30.0",
+        "react": "^16.9.0",
+        "react-dom": "^16.9.0",
+        "react-redux": "^5.0.7",
+        "redux": "^3.6.0",
+        "redux-devtools-extension": "^2.13.2",
+        "redux-logger": "^3.0.1",
+        "redux-react-session": "^2.6.0",
+        "redux-starter-kit": "^0.7.0",
+        "redux-thunk": "^2.3.0"
+    },
+    "devDependencies": {
+        "babel-eslint": "^10.0.1",
+        "babel-jest": "^23.6.0",
+        "babel-plugin-module-resolver": "^3.1.1",
+        "eslint": "^5.7.0",
+        "eslint-config-airbnb": "^17.1.1",
+        "eslint-plugin-import": "^2.14.0",
+        "eslint-plugin-jsx-a11y": "^6.1.2",
+        "eslint-plugin-react": "^7.11.1",
+        "jest": "^23.6.0",
+        "jest-expo": "30.0.0",
+        "jest-haste-map": "^23.6.0",
+        "jest-resolve": "^23.6.0",
+        "jest-styled-components": "^6.3.3",
+        "lerna": "^3.4.3",
+        "react-test-renderer": "^16.11.0",
+        "redux-devtools": "^3.5.0"
+    },
+    "workspaces": [
+        "packages/*"
+    ],
+    "keywords": [
+        "lerna",
+        "monorepo",
+        "multi-package",
+        "react-native",
+        "yarn",
+        "workspaces"
+    ]
+}

@@ -1,0 +1,1 @@
+export REACT_APP_IS_MOCK=false

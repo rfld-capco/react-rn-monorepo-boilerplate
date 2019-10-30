@@ -1,0 +1,100 @@
+@import url('//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css');
+body {
+    font-weight: 300;
+}
+.nav {
+    background-color: #ffffff;
+    padding: 1em;
+    display: block;
+}
+
+.nav a {
+    color: #000000;
+}
+
+.nav a:visited {
+    color: rgb(0, 11, 107);
+}
+
+.navWide {
+    display: none;
+    margin: 0 auto;
+}
+.wideDiv {
+    text-align: center;
+    display: block;
+    background-color: #000000;
+}
+.wideDiv a {
+    position: block;
+    text-decoration: none;
+    float: left;
+    left: 25%;
+    padding-top: 32px;
+    margin-left: 15%;
+}
+.wideDiv a:hover {
+    color: Deeppink;
+    border-bottom: 1px solid Deeppink;
+}
+.wideDiv img {
+    width: 10%;
+    height: 10%;
+    float: left;
+    margin-left: 5px;
+    margin-top: 16px;
+    display: block;
+    max-height: 66px;
+    max-width: 250px;
+    min-height: 66px;
+    min-width: 250px;
+}
+.navNarrow {
+    display: block;
+}
+.navNarrow i {
+    float: right;
+    cursor: pointer;
+    color: #000000;
+    padding-top: 5%;
+    padding-right: 5%;
+}
+
+.navNarrow img {
+    width: 10%;
+    height: 10%;
+    float: left;
+    margin-left: 5px;
+    margin-top: 16px;
+    display: block;
+    max-height: 66px;
+    max-width: 250px;
+    min-height: 66px;
+    min-width: 250px;
+}
+
+.narrowLinks {
+    display: none;
+}
+.narrowLinks a {
+    text-decoration: none;
+    display: block;
+    float: left;
+    clear: left;
+    padding: 0.5em 0;
+}
+
+.narrowLinks a:hover {
+    color: Deeppink;
+    border-bottom: 1px solid Deeppink;
+}
+
+@media (min-width: 794px) {
+    .navWide {
+        display: block;
+    }
+
+    .navNarrow {
+        display: none;
+    }
+}
