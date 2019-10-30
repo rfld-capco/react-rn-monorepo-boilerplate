@@ -1,0 +1,15 @@
+.parent {
+    position: relative;
+}
+
+.mainDivContent {
+    position: relative;
+    background-color: #fafafa;
+    display: flex;
+    height: 1000%;
+}
+
+.header {
+    text-align: center;
+    margin-top: 5%;
+}

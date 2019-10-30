@@ -4,6 +4,7 @@ body {
 }
 .nav {
     background-color: #ffffff;
+    overflow: hidden;
     padding: 1em;
     display: block;
 }
@@ -20,17 +21,21 @@ body {
     display: none;
     margin: 0 auto;
 }
+
+.img {
+    width: 1%;
+    height: 1%;
+}
 .wideDiv {
     text-align: center;
     display: block;
-    background-color: #000000;
 }
 .wideDiv a {
     position: block;
     text-decoration: none;
     float: left;
     left: 25%;
-    padding-top: 32px;
+    padding-top: 28px;
     margin-left: 15%;
 }
 .wideDiv a:hover {
@@ -42,12 +47,11 @@ body {
     height: 10%;
     float: left;
     margin-left: 5px;
-    margin-top: 16px;
     display: block;
-    max-height: 66px;
-    max-width: 250px;
-    min-height: 66px;
-    min-width: 250px;
+    max-height: 75px;
+    max-width: 225px;
+    min-height: 75px;
+    min-width: 225px;
 }
 .navNarrow {
     display: block;
@@ -56,21 +60,18 @@ body {
     float: right;
     cursor: pointer;
     color: #000000;
-    padding-top: 5%;
+    padding-top: 1%;
     padding-right: 5%;
 }
 
 .navNarrow img {
-    width: 10%;
-    height: 10%;
+    width: 1%;
+    height: 1%;
     float: left;
-    margin-left: 5px;
-    margin-top: 16px;
-    display: block;
-    max-height: 66px;
-    max-width: 250px;
-    min-height: 66px;
-    min-width: 250px;
+    max-height: 75px;
+    max-width: 225px;
+    min-height: 75px;
+    min-width: 225px;
 }
 
 .narrowLinks {

@@ -1,15 +1,16 @@
-import React from 'react';
+import React, {Component} from 'react';
+import 'antd';
+import '../styles/navStyle.css';
 import images from 'shared/res/images';
-import {connect} from 'react-redux';
-import '../../styles/navStyle.css';
-import shR from 'shared/res/R';
+import {Redirect} from 'react-router-dom';
+import sharedAuthFunctions from 'shared/containers/Auth';
+import {isLoggedIn} from '../../utils';
+import WebRoute from '../../utils/webroute';
+import R from '../../res/R';
 
-class NavComponent extends React.Component {
+class NavComponent extends Component {
     constructor(props) {
         super(props);
-        this.state = {
-            visible: false
-        };
         this.burgerToggle = () => {
             let linksEl = document.querySelector('.narrowLinks');
             if (linksEl.style.display === 'block') {
@@ -21,20 +22,37 @@ class NavComponent extends React.Component {
     }
 
     render() {
+        if (!isLoggedIn()) {
+            return <Redirect to={WebRoute.auth} />;
+        }
         return (
-            <nav className="nav">
+            <nav>
                 <div className="navWide">
                     <div className="wideDiv">
                         <img src={images.main.logo} alt="" />
-                        <a href="localhost:3000">{shR.strings.auth.home}</a>
+                        <a href={'/'}>{R.strings.home.links.home}</a>
+                        <a
+                            onClick={() => {
+                                this.props.logout();
+                            }}
+                        >
+                            {this.props.logoutButtonTitle}
+                        </a>
                     </div>
                 </div>
                 <div className="navNarrow">
                     <img src={images.main.logo} alt="" />
                     <i className="fa fa-bars fa-2x" onClick={this.burgerToggle}></i>
                     <div className="narrowLinks">
-                        <a href="localhost:3000" onClick={this.burgerToggle}>
-                            {shR.strings.auth.home}
+                        <a href={'/'} onClick={this.burgerToggle}>
+                            {R.strings.home.links.home}
+                        </a>
+                        <a
+                            onClick={() => {
+                                this.props.logout();
+                            }}
+                        >
+                            {this.props.logoutButtonTitle}
                         </a>
                     </div>
                 </div>
@@ -43,8 +61,4 @@ class NavComponent extends React.Component {
     }
 }
 
-function mapStateToProps(state) {
-    return {};
-}
-
-export default connect(mapStateToProps)(NavComponent);
+export default sharedAuthFunctions(NavComponent);

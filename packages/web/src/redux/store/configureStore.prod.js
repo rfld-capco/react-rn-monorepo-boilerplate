@@ -2,7 +2,7 @@ import {createStore, applyMiddleware} from 'redux';
 import {composeWithDevTools} from 'redux-devtools-extension';
 import {apiMiddleware} from 'redux-api-middleware';
 import thunk from 'redux-thunk';
-import rootReducer from 'shared/redux/reducers';
+import rootReducer from '../reducers';
 import API from 'shared/services/';
 import {createBrowserHistory} from 'history';
 export const history = createBrowserHistory();

@@ -1,21 +1,19 @@
-import React from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
-import App from "./components/App";
-import Main from "./components/Main";
-import { Route, BrowserRouter } from "react-router-dom";
-import configureStore from "./redux/store/configureStore";
+import React from "react";
+import { ConnectedRouter } from "react-router-redux";
+import configureStore, { history } from './redux/store/configureStore'
+import App from "./containers/App";
 import "./index.css";
 
-const store = configureStore();
+const store = configureStore(); 
 
 ReactDOM.render(
   <Provider store={store}>
-    <BrowserRouter>
-      <App>
-        <Route path="/" exact component={Main} />
-      </App>
-    </BrowserRouter>
+    <ConnectedRouter history={history}>
+      <App {...history} />
+    </ConnectedRouter>
   </Provider>,
-  document.querySelector("#root")
+  document.getElementById('root') || document.createElement('div') // for testing purposes
 );
+ 
